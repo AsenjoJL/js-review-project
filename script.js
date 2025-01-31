@@ -34,6 +34,16 @@ function addTodo(event) {
     }
 }
 
+//function to edit todo
+function editTodo(index) {
+    const updatedTodo = prompt('Edit your todo:', todos[index]);
+    if(updatedTodo !==null) {
+        todos[index] = updatedTodo.trim();
+        renderTodos();
+    }
+}
+
+
 // Function to delete a todo
 function deleteTodo(index) {
     if (confirm('Are you sure you want to delete this todo?')) {
